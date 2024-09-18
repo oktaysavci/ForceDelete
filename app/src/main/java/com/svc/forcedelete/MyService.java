@@ -1,4 +1,4 @@
-package com.svc.prank;
+package com.svc.forcedelete;
 
 import android.app.Service;
 import android.content.Intent;
