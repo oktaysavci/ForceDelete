@@ -62,13 +62,12 @@ public class MyService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        // Servis durdurulsa bile yeniden başlatılmasını sağlar
         return START_STICKY;
     }
 
     @Override
     public void onTaskRemoved(Intent rootIntent) {
-        // Uygulama görev yöneticisinden kapatılırsa, servisi yeniden başlatır
+        // Uygulama görev yöneticisinden kapatılırsa servisi yeniden başlatır.
         Intent restartServiceIntent = new Intent(getApplicationContext(), this.getClass());
         restartServiceIntent.setPackage(getPackageName());
         startService(restartServiceIntent);
