@@ -9,7 +9,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         startService(new Intent(this, MyService.class));
-        finish(); // MainActivity'yi kapat
+        finish(); 
     }
 }
 
